@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 5</title>
+</head>
+<body>
+   <h2 class="title">Задача 5</h2>
+   <p> З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). Вивести на
+екран назву транспортного засобу, яким він може керувати
+   </p>
+   <script>
+    // 1 Водим необходимые данные
+    const moto = "A"
+    const passengerСar = "B"
+    const truck = "C"
+    const driverLisens = prompt('Введите категорию прав','').toUpperCase()
+    
+    // 2 Находим результат
+   if (driverLisens === moto) {
+    alert('Вы можите управлять мотоциклом')
+   } else if (driverLisens === passengerСar) {
+    alert('Вы можите управлять легковым автомобилем')
+   } else if (driverLisens === truck) {
+    alert('Вы можите управлять грузовым автомобилем')
+   } else{
+    alert('Нет такой категории')
+   }
+    
+
+    
+    // 3 Виводим результат
+    
+   </script>
+</body>
+</html>

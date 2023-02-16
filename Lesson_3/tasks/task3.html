@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 3</title>
+</head>
+<body>
+   <h2 class="title">Задача 3</h2>
+   <p> Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.
+   </p>
+   <script>
+    // 1 Водим необходимые данные
+   
+    const minNumber = 1
+    const maxNumber = 5
+    const randomNumber = minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1))
+    // 2 Находим результат
+   let guessNumber = parseInt(prompt(`Угадай число от ${minNumber} до ${maxNumber} ?,`))
+   if (guessNumber === randomNumber) {
+    alert(`Вы угадали число ${randomNumber} с первого раза`)
+   } else {
+    guessNumber = parseInt(prompt('Неугадали, попробуйте еще раз'))
+
+    if (guessNumber === randomNumber) {
+        alert(`Угадали ${randomNumber}, совторой попытки`)
+    } else {
+        alert(`Вы не угадали ${randomNumber} `)
+        document.write('Вы не угадали ') 
+    }
+   }
+    
+    // 3 Виводим результат
+    document.write(`Случайное число ${randomNumber}, ваше число ${guessNumber} `)
+   </script>
+</body>
+</html>

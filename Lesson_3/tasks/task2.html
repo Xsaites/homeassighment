@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 2</title>
+</head>
+<body>
+   <h2 class="title">Задача 2</h2>
+   <p> 2. З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо
+ще залишаються гроші, то пропонуємо купити лотерею за 4 грн
+   </p>
+   <script>
+    // 1 Водим необходимые данные
+    let priceItem = parseFloat(prompt('Введите цену товара', 'грн'))
+    let quantityManey = parseFloat(prompt('Введите количество денег', 'грн'))
+    const lotter = 4
+    let surrender = quantityManey - priceItem
+    let surrenderWithLottery = quantityManey - priceItem - lotter
+    
+
+
+
+    // 2 Находим результат
+   if (quantityManey < priceItem) {
+    document.write('Недостаточно средств на счету')
+   } else {
+    if (surrender < lotter) {
+        document.write(`Спасибо за покупку, ваша сдача ${surrender}`)
+    } else {
+        if (confirm(`Ваша сдача ${surrender}, купите лотарею за ${lotter}?`)) {
+            document.write(`Спасибо за покупки, ваша сдача ${surrenderWithLottery}`)
+        } else {
+            document.write(`Ходи без лотареи, ваша сдача ${surrender}`)
+        }
+    }
+   }
+
+    
+    
+   
+   
+   
+   </script>
+</body>
+</html>

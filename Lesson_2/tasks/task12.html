@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 11</title>
+</head>
+<body>
+   <h2 class="title">Задача 11</h2>
+    <p>
+        4. З клавіатури вводиться вік дитини. Вивести на екран через скільки років вона буде відвідувати садочок, піде у школу,
+        закінчить школу, вступить і закінчить
+    </p>
+   <script>
+    // 1 Водим необходимые данные
+   let childYearOld = parseInt(prompt('Введите возраст ребенка',''))
+    const kindergarten = 3
+    const school = 7
+    const shoolEnd = 17
+    const university = 18
+    const universityEnd = 22
+    
+
+
+    // 2 Находим результат
+    let kindergartenStart = kindergarten - childYearOld
+    let schoolStart = school - childYearOld
+    let shoolEndEnd = shoolEnd - childYearOld
+    let universityStart = university - childYearOld
+    let universityEndEnd = universityEnd - childYearOld
+   
+    
+    // 3 Виводим результат
+    document.write(`
+    Пойдет в садик через ${kindergartenStart} лет <br/>
+    Пойдет в школу через ${schoolStart} лет <br/>
+    Закончит школу через ${shoolEndEnd} лет <br/>
+    Пойдет в универ через ${universityStart} лет <br/>
+    Закончит универ через ${universityEndEnd} лет <br/>
+
+    `) 
+   </script>
+</body>
+</html>
